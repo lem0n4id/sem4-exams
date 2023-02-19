@@ -9,9 +9,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.25.4"
+    "astro": "^2.0.12"
   },
   "engines": {
-    "node": ">=14.15.0"
+    "node": "^14.15.0 || >=16.0.0"
   }
 }
