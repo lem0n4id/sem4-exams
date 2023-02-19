@@ -1,0 +1,161 @@
+---
+// function ISTDate(day, month, year) {
+// 	var date = new Date(Date.UTC(year, month,day))
+// 	let options = {
+// 		timeZone: 'Asia/Kolkata',
+// 	}
+// 	return new Intl.DateTimeFormat('en-GB', options).format(date)
+// }
+// let JEE_SESSION_1 = ISTDate('16','04', '2022')
+// let JEE_SESSION_2 = ISTDate('24','05', '2022')
+// let VITEEE = ISTDate('17','06', '2022')
+// let CBSE = ISTDate('7','05', '2022')
+
+
+let CAT2A_MICRO = "11-03-2023"
+let CAT2B_VLSI = "13-03-2023"
+let CAT2C_DAA = "14-03-2023"
+let CAT2D_MATH = "15-03-2023"
+let CAT2L_STS = "16-03-2023"
+let CAT2F_SP = "17-03-2023"
+let CAT2G_ESP = "18-03-2023"
+
+
+---
+
+<article>
+	<div class="banner">
+	<span>Today's date: </span>
+		
+	</div>
+
+	<section class="dates">
+		
+		
+		<div style="display: flex; gap: 2rem; justify-content: space-between;">
+			<p><b>MICROCONTROLLERS:</b> {CAT2A_MICRO}</p>
+			<div class="CAT2A_MICRO align-left"></div>
+		</div>
+		<div style="display: flex; gap: 2rem; justify-content: space-between;">
+			<p><b>VLSI:</b> {CAT2B_VLSI}</p>
+			<div class="CAT2B_VLSI align-left"></div>
+		</div>
+		<div style="display: flex; gap: 2rem; justify-content: space-between;">
+			<p><b>DAA:</b> {CAT2C_DAA}</p>
+			<div class="CAT2C_DAA align-left"></div>
+		</div>
+		<div style="display: flex; gap: 2rem; justify-content: space-between;">
+			<p><b>DISCRETE MATH:</b> {CAT2D_MATH}</p>
+			<div class="CAT2D_MATH align-left"></div>
+		</div>
+		<div style="display: flex; gap: 2rem; justify-content: space-between;">
+			<p><b>STS:</b> {CAT2L_STS}</p>
+			<div class="CAT2L_STS align-left"></div>
+		</div>
+		<div style="display: flex; gap: 2rem; justify-content: space-between;">
+			<p><b>SIGNAL PROCESSING:</b> {CAT2F_SP}</p>
+			<div class="CAT2F_SP align-left"></div>
+		</div>
+		<div style="display: flex; gap: 2rem; justify-content: space-between;">
+			<p><b>SPANISH:</b> {CAT2G_ESP}</p>
+			<div class="CAT2G_ESP align-left"></div>
+		</div>
+	</section>
+	
+</article>
+
+<style>
+	article {
+		padding-top: 2em;
+		line-height: 1.5;
+	}
+	section {
+		margin-top: 2em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		max-width: 70ch;
+	}
+
+	.banner {
+		text-align: center;
+		font-size: 1.3rem;
+		background: var(--color-light);
+		padding: 1em 1.5em;
+		padding-left: 0.75em;
+		border-radius: 4px;
+	}
+	.dates {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	.align-left {
+		display: inline-flex;
+	}
+</style>
+<link rel="stylesheet" href="/simplyCountdown.theme.default.css"/>
+<script src="/simplyCountdown.min.js"></script>
+<script>
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = dd + '-' + mm + '-' + yyyy;
+// document.write(today);
+
+const para = document.createElement("span");
+let bold = document.createElement('strong')
+const node = document.createTextNode(today);
+bold.appendChild(node);
+para.appendChild(bold);
+
+const element = document.getElementsByClassName("banner")[0];
+element.appendChild(para);
+</script>
+<script>
+// time is shown as the difference between current time and the start(00:00hrs) of the countdown day
+
+simplyCountdown('.CAT2A_MICRO', { // "11-03-2023"
+  year: 2023, 
+  month: 03, 
+  day: 11,
+  inline: true,
+});
+simplyCountdown('.CAT2B_VLSI', { // "13-03-2023"
+  year: 2023, 
+  month: 03, 
+  day: 13,
+  inline: true,
+});
+simplyCountdown('.CAT2C_DAA', { // "14-03-2023"
+  year: 2023, 
+  month: 03, 
+  day: 14,
+  inline: true,
+});
+simplyCountdown('.CAT2D_MATH', { // "15-03-2023"
+  year: 2023, 
+  month: 03, 
+  day: 15,
+  inline: true,
+});
+simplyCountdown('.CAT2L_STS', { // "16-03-2023"
+  year: 2023, 
+  month: 03, 
+  day: 16,
+  inline: true,
+});
+simplyCountdown('.CAT2F_SP', { // "17-03-2023"
+  year: 2023, 
+  month: 03, 
+  day: 17,
+  inline: true,
+});
+simplyCountdown('.CAT2G_ESP', { // "18-03-2023"
+  year: 2023, 
+  month: 03, 
+  day: 18,
+  inline: true,
+});
+</script>
